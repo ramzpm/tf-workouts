@@ -1,3 +1,8 @@
-*.tfstate
+*
+!/**/
+!*.*
+*.tfstate*
 *.hcl
 *local*
+*.terraform*
+*.DS_store
