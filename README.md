@@ -1,6 +1,4 @@
 # tf-workouts
-Terraform Associate preparations
-
 Welcome to the Terraform Certificate prep ! 
 
 These are my sample tryouts on how to use Terraform to manage and provision infrastructure on various cloud platforms. 
