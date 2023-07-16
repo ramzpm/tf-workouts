@@ -1,0 +1,1 @@
+terraform plan -var file_name="Test.txt"

@@ -1,3 +1,13 @@
+
+Terraform language provides different types of blocks that allow for the retrieval or declaration of named values.
+
+Input Variables act as parameters for Terraform modules, enabling users to customize the behavior of the module without directly modifying the source code.
+
+Output Values serve as analogous to return values in a Terraform module, providing information or data that can be used by other modules or external systems.
+
+Local Values offer a convenient way to assign a concise name to an expression, allowing for easier referencing and readability within the Terraform configuration.
+
+
 # Variables 
 
 Terraform variables are used to make the configuration more flexible and reusable. They allow you to pass values into the Terraform configuration and use them in various places such as resource properties, module inputs, and outputs.
