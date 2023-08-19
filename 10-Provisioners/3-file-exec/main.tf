@@ -19,22 +19,22 @@ resource "aws_security_group_rule" "allow_ssh" {
 resource "aws_instance" "example" {
   ami                    = "ami-0688ba7eeeeefe3cd" # Amazon Linux 2 AMI
   instance_type          = "t2.micro"
-  key_name               = "natwest-keypair" # Replace with your existing EC2 key pair
+  key_name               = "natwest-keypair"
   vpc_security_group_ids = [aws_security_group.example.id]
 
   tags = {
     Name = "Natwest"
 
   }
-  provisioner "remote-exec" {
-    inline = [
-      "touch natwest.txt"
-    ]
-    connection {
-      type        = "ssh"
-      user        = "ubuntu"
-      private_key = file("natwest-keypair.pem")
-      host        = self.public_ip
-    }
+  provisioner "file" {
+    source      = "main.tf"
+    destination = "/tmp/main.tf"
+  }
+
+  connection {
+    type        = "ssh"
+    user        = "ubuntu"
+    private_key = file("natwest-keypair.pem")
+    host        = self.public_ip
   }
 }
