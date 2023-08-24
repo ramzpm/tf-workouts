@@ -6,3 +6,4 @@
 *local*
 *.terraform*
 *.DS_store
+*.pem
