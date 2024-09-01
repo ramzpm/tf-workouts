@@ -6,7 +6,9 @@ variable "file_name" {
 
 resource "local_file" "create_file" {
   content  = "Hi... filename is fetched from tfvar command."
-  filename = var.file_name //variables which is not initialized will be prompted while applying the terraform apply command
+  filename = var.file_name //variables are initialized from the tfvars
 }
+//terraform apply -var-file="input.tfvars"
+
 
 

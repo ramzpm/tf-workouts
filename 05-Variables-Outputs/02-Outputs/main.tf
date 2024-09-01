@@ -9,7 +9,7 @@ data "http" "sample_url" {
 output "url_status_code" {
   value       = data.http.sample_url.status_code
   description = "Status code."
-  sensitive   = true
+  sensitive   = false
 }
 
 output "boolean_output" {
