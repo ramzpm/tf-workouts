@@ -5,7 +5,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "my-terraform-state-natwest" //create bucket before running
+    bucket = "my-terraform-state-natwest"
     key    = "terraform.tfstate"
     region = "us-west-2"
   }
